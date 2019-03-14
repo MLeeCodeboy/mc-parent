@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8903
+spring:
+  application:
+    name: hystrix-dashboard-turbine
+turbine:
+  appConfig: service-feign,ribbon-service
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+
+
